@@ -1,0 +1,11 @@
+content:
+  - name: Home
+    label: Home Page
+    path: src/pages/index.astro
+    type: file
+    fields:
+      - name: text
+        label: Text
+        type: rich-text
+        options:
+          media: false
