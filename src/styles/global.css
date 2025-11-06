@@ -1,2 +1,27 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    --color-primary: #D947CB;
+}
+
+/* customize tailwindcss */
+
+@theme {
+    --font-sans: 'Montserrat Variable', sans-serif;
+    --font-weight: 600;
+}
+
+@utility btn {
+    @apply rounded-xl;
+}
+
+@utility container {
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+body {
+    font-weight: 500;
+}
