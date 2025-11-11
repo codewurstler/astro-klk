@@ -37,4 +37,4 @@ content:
 
 media:
   input: src/media
-  output: ../../media
+  output: src/media
