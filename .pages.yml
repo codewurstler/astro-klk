@@ -36,5 +36,5 @@ content:
         type: rich-text
 
 media:
-  input: public/media
+  input: src/media
   output: /media
