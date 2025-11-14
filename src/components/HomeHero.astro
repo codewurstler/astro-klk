@@ -26,7 +26,16 @@ import Header from './Header.astro';
             </div>
         </div>
         <div class="container flex justify-center">
-            <button class="btn btn-outline">Mehr erfahren</button>
+            <button class="btn btn-outline" id="scrollToMainBtn">Mehr erfahren</button>
         </div>
     </div>
 </div>
+<script>
+    const mainContainer = document.querySelector('main');
+    const scrollToMainBtn = document.querySelector('#scrollToMainBtn');
+    scrollToMainBtn?.addEventListener('click', (e) => {
+        if (mainContainer) {
+            mainContainer.scrollIntoView({behavior: 'smooth'});
+        }
+    })
+</script>
