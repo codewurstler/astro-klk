@@ -2,26 +2,30 @@
 import { SITE_TITLE } from '../consts';
 import {Image} from "astro:assets";
 import bgImage from '../assets/home-bg.jpg'
-import klkLogo from '../assets/klk-logo-white.svg'
+import klkLogo from '../assets/klk-logo-white-GOOD.svg'
 import Header from './Header.astro';
 ---
 <Header />
-<div class="h-dvh w-full bg-no-repeat bg-center bg-cover -mt-[84px] lg:-mt-[115px] py-[150px] text-base-100" style={`background-image: url(${bgImage.src})`}>
+<div class="h-dvh w-full bg-no-repeat bg-center bg-cover -mt-[64px] lg:-mt-[65px] pb-8 pt-32 lg:py-32 text-base-100 rounded-b-xl" style={`background-image: url(${bgImage.src})`}>
     <h1 class="sr-only">Kultur Live Küssnacht</h1>
-    <div class="h-full flex flex-col justify-center">
-        <div class="py-4 glass">
-            <div class="container text-center">
-                <p>Unterstütze lokale Künstler und erlebe Kultur hautnah – <a role="button" class="btn btn-link btn-primary p-0 decoration-0">Jetzt Mitglied werden </a>
-                </p>
-            </div>
+    <div class="h-full flex flex-col justify-between">
+        <div class="container text-center font-extralight lg:mt-16">
+            <p>Unterstütze lokale Künstler und erlebe Kultur hautnah – <a role="button" class="btn btn-link btn-primary p-0 decoration-0">Jetzt Mitglied werden </a></p>
         </div>
-        <div class="container">
+        <div class="container -mt-16 lg:-mt-32">
             <div class="flex flex-col items-center">
-                <Image src={klkLogo} alt="Kultur Live Küssnacht Logo" />
-                <h2 class="font-extralight text-3xl text-center lg:w-2xl">Wir bringen Kultur zurück nach Küssnacht – live, lokal und leidenschaftlich.</h2>
+                <Image src={klkLogo} alt="Kultur Live Küssnacht Logo" class="w-1/2 lg:w-xs"/>
+                <h2 class="font-extralight mt-4 lg:mt-16 text-xl lg:text-3xl text-center lg:w-2xl">Wir bringen Kultur zurück nach Küssnacht</h2>
+                <span class="text-rotate text-2xl lg:text-4xl mt-8">
+                <span class="justify-items-center">
+                    <span>LIVE &#127928;</span>
+                    <span>LOKAL &#127968;</span>
+                    <span>LEIDENSCHAFTLICH &#129505;</span>
+                </span>
+            </span>
             </div>
         </div>
-        <div class="container mt-auto flex justify-center">
+        <div class="container flex justify-center">
             <button class="btn btn-outline">Mehr erfahren</button>
         </div>
     </div>

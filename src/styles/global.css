@@ -25,3 +25,33 @@
 body {
     font-weight: 500;
 }
+
+/*
+MAIN NAV
+ */
+.headroom--top {
+    @apply
+    glass;
+
+    .menu-light {
+        @apply
+        text-base-100;
+
+        a {
+            @apply
+            hover:bg-base-content/25;
+        }
+    }
+}
+
+.headroom--not-top {
+    @apply
+    top-4
+    bg-base-100
+    shadow-2xl;
+
+    img {
+        @apply
+        invert;
+    }
+}
