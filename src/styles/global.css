@@ -10,7 +10,6 @@
 
 @theme {
     --font-sans: 'Montserrat Variable', sans-serif;
-    --font-weight: 600;
 }
 
 @utility btn {
@@ -22,8 +21,59 @@
     margin-inline: auto;
 }
 
-body {
-    font-weight: 500;
+
+/*
+TYPOGRAPHY
+ */
+@layer components {
+    body {
+        @apply
+        font-medium;
+    }
+
+    p {
+        @apply
+        font-extralight;
+
+        &:not(:last-child) {
+            @apply
+            mb-4;
+        }
+    }
+
+    h2, h3, h4, h5, h6 {
+        @apply
+        mb-4
+        lg:mb-6;
+    }
+
+    h2 {
+        @apply
+        text-2xl
+        lg:text-4xl
+    }
+
+    h3 {
+        @apply
+        text-2xl
+        lg:text-3xl
+    }
+
+    ul:not(.menu) {
+        list-style: disc outside;
+        padding-left: 0;
+        margin-left: 16px;
+
+        li {
+            @apply
+            font-extralight;
+
+            &:not(:last-child) {
+                @apply
+                mb-4;
+            }
+        }
+    }
 }
 
 /*

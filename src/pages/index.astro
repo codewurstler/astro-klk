@@ -1,46 +1,138 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import {SITE_DESCRIPTION, SITE_TITLE} from '../consts';
 import Default from "../layouts/Default.astro";
 import HomeHero from "../components/HomeHero.astro";
+import bgImage from '../assets/home-bg.jpg'
 ---
 <Default>
     <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
     </head>
-    <HomeHero />
+    <HomeHero/>
     <main>
-        <h1>🧑‍🚀 Hello, Astronaut!</h1>
-        <p>
-            Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-            template serves as a lightweight, minimally-styled starting point for anyone looking to build
-            a personal website, blog, or portfolio with Astro.
-        </p>
-        <p>
-            This template comes with a few integrations already configured in your
-            <code>astro.config.mjs</code> file. You can customize your setup with
-            <a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-            React, or Vue to your project.
-        </p>
-        <p>Here are a few ideas on how to get started with the template:</p>
-        <ul>
-            <li>Edit this page in <code>src/pages/index.astro</code></li>
-            <li>Edit the site header items in <code>src/components/Header.astro</code></li>
-            <li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-            <li>Check out the included blog posts in <code>src/content/blog/</code></li>
-            <li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-        </ul>
-        <p>
-            Have fun! If you get stuck, remember to
-            <a href="https://docs.astro.build/">read the docs</a>
-            or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-        </p>
-        <p>
-            Looking for a blog template with a bit more personality? Check out
-            <a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-            by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-        </p>
+        <section id="wir-sind">
+            <div class="container py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-6">
+                        <h2>&#10067; Wer wir sind</h2>
+                        <p>
+                            Kultur Live Küssnacht (KLK) ist ein gemeinnütziger sowie politisch, konfessionell und
+                            gesellschaftlich unabhängiger Verein. Er
+                            wurde Anfang 2025 mit dem Ziel gegründet, die Kulturlandschaft im Bezirk Küssnacht auszubauen und zu
+                            diversifizieren.
+                            Die drei Gründungsmitglieder bilden den aktuellen Vorstand, der sich wie folgt zusammensetzt</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1663478595761-26d99b2e29f1?q=80&w=1180&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="KLK Vorstand Gruppenphoto"
+                         class="rounded-xl lg:col-span-6 mx-auto w-3/4 lg:w-full h-auto shadow-sm" />
+                </div>
+            </div>
+            <div class="py-16 bg-primary-content rounded-xl bg-no-repeat bg-center bg-cover" style={`background-image: url(${bgImage.src})`}>
+                <div class="container w-3/4 md:w-full lg:w-3/4 xl:w-1/2">
+                    <h3 class="text-base-100 mb-12">Vorstandsmitglieder</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="card w-full bg-base-100 card-md shadow-sm rounded-xl">
+                            <figure class="p-4">
+                                <img src="https://placehold.co/333x222"
+                                     alt="Elias Durrer"
+                                     class="rounded-xl" />
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title mb-2">Elias Durrer</h2>
+                                <ul>
+                                    <li>Präsident</li>
+                                    <li class="font-extralight">Immmensee</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card w-full bg-base-100 card-md shadow-sm rounded-xl">
+                            <figure class="p-4">
+                                <img src="https://placehold.co/333x222"
+                                     alt="Elias Durrer"
+                                     class="rounded-xl" />
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title mb-2">Yves Ducrey</h2>
+                                <ul>
+                                    <li>Aktuar</li>
+                                    <li class="font-extralight">Küssnacht</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card w-full bg-base-100 card-md shadow-sm rounded-xl">
+                            <figure class="p-4">
+                                <img src="https://placehold.co/333x222"
+                                     alt="Elias Durrer"
+                                     class="rounded-xl" />
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title mb-2">Andreas Pfister</h2>
+                                <ul>
+                                    <li>Kassier</li>
+                                    <li class="font-extralight">Küssnacht</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-6">
+                        <p> Die Vorstandsmitglieder haben unterschiedliche persönliche und berufliche Hintergründe. Das gemeinsame Interesse an Musik
+                            und kulturellen Veranstaltungen brachte sie zusammen, verbindet sie und treibt sie an. Zudem sind alle drei im Bezirk Küssnacht
+                            aufgewachsen, hier verwurzelt und gut vernetzt – eine ideale Basis, um das kulturelle Leben in der Region aktiv zu gestalten und
+                            weiterzuentwickeln.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision">
+            <div class="container py-16 prose">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <img src="https://images.unsplash.com/photo-1609800029525-b91fdea39774?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="KLK Vision einer Veranstaltung"
+                         class="rounded-xl lg:col-span-6 mx-auto w-3/4 lg:w-full h-auto shadow-sm" />
+                    <div class="lg:col-span-6">
+                        <h2>&#128302; Vision</h2>
+                        <p>
+                            Unser Bezirk hat im Kulturbereich Lücken und gleichzeitig auch grosses Potenzial. Unsere Vision ist es, unserem Bezirk, in dem
+                            Tradition und Innovation nebeneinanderstehen, etwas zurückzugeben und das klar vorhandene Bedürfnis nach kulturellen
+                            Veranstaltungen sichtbar zu machen sowie nachhaltig zu bedienen. </p>
+                        <p>Mit Kultur Live Küssnacht (KLK) möchten wir das kulturelle Leben im Bezirk Küssnacht wiederbeleben und neue Impulse setzen,
+                            indem wir Veranstaltungen organisieren sowie bereits bestehende Anlässe fördern und unterstützen. </p>
+                        <p>Mit unseren Mitgliedern möchten wir ein Netzwerk aus freiwilligen Helfern aufbauen, um eigene Anlässe kostengünstig und
+                            effizient durchzuführen. Weiter möchten wir auch in der Lage sein, fremdorganisierte Anlässe im Bezirk mit Helfern und/oder
+                            finanziell zu unterstützen. </p>
+                        <p>Im Fokus stehen dabei Livekonzerte diverser Stilrichtungen, die möglichst viele Alters- und Interessengruppen ansprechen.
+                            Gleichzeitig sind wir offen für weitere Bühnen- und Performancekunst sowie Kooperationen mit anderen lokalen Vereinen,
+                            Kulturschaffenden und Institutionen.</p>
+                        <p>Oberstes Ziel ist die Förderung und Unterstützung von regionalen Künstlern, Musikern und Bands. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission">
+            <div class="py-16 bg-primary-content rounded-xl bg-no-repeat bg-center bg-cover" style={`background-image: url(${bgImage.src})`}>
+                <div class="container w-3/4 md:w-full lg:w-3/4 xl:w-1/2 text-base-100">
+                    <h2>&#128640; Mission</h2>
+                    <ul>
+                        <li>Kultur für ein breites Publikum zugänglich und erlebbar machen</li>
+                        <li>Indem wir das kulturelle Leben im Bezirk Küssnacht wiederbeleben und neue Impulse setzen</li>
+                        <li>Livekonzerte und Veranstaltungen organisieren und fördern, die Menschen zusammenbringen</li>
+                        <li>Sowie mit lokalen Vereinen, Kulturschaffenden und Institutionen zusammenarbeiten, um Synergien zu nutzen und sie bei
+                            der Planung und Durchführung von Anlässen zu unterstützen</li>
+                        <li>Dabei ist die Zielsetzung des Vereins ausschliesslich gemeinnützig und das Vereinsvermögen wird ausschliesslich
+                            zweckgebunden eingesetzt, insbesondere verschafft der Verein seinem Vorstand und seinen Mitgliedern keinerlei
+                            finanzielle Vorteile</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
-    <Footer />
+    <Footer/>
 </Default>
