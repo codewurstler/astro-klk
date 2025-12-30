@@ -1,0 +1,15 @@
+---
+import Header from './Header.astro';
+const { title, description } = Astro.props;
+---
+<Header />
+<div class="min-h-[200px] lg:min-h-[300px] w-full bg-[#020617] relative text-base-100 rounded-b-xl -mt-[64px] lg:-mt-[65px] flex flex-col">
+    <div class="absolute inset-0 z-0 rounded-b-xl" style={{backgroundImage: `radial-gradient(circle 600px at 50% 100px, rgba(139,92,246,0.4), transparent)`}}/>
+    <div class="relative z-10 pt-32 lg:pt-46 pb-16 my-auto">
+        <div class="container text-center">
+            <h1 class="text-2xl lg:text-4xl font-bold">{title}</h1>
+            {description && <p class="font-extralight text-xl mt-6">{description}</p>}
+        </div>
+    </div>
+</div>
+
