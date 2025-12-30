@@ -14,8 +14,8 @@
     "@astrojs/sitemap": "^3.6.0",
     "@fontsource-variable/montserrat": "^5.2.8",
     "@tailwindcss/vite": "^4.1.16",
-    "astro": "^5.15.3",
-    "daisyui": "^5.4.2",
+    "astro": "^5.16.6",
+    "daisyui": "^5.5.14",
     "headroom.js": "^0.12.0",
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.16"
